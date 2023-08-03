@@ -20,7 +20,7 @@ h1{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 150px;
+    height: 250px;
 }
 
 .tile{
@@ -28,7 +28,4 @@ h1{
     height: 16px;
     width: 16px;
     border: 1px solid black;
-}
-.tile :hover{
-    color:rgb(79, 40, 40);
 }
