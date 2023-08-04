@@ -20,12 +20,15 @@ h1{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 250px;
+    flex-direction: row;
+    width: 960px;
+    
 }
 
 .tile{
     background-color: white;
     height: 16px;
     width: 16px;
+    margin: 1px;
     border: 1px solid black;
 }
