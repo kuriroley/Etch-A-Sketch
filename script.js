@@ -1,15 +1,18 @@
-const container = document.getElementById('etch-container');
 
-        
+function sketchStarter(value){
+    const container = document.querySelector('.sketch-pad');
+    container.style.gridTemplateRows = `repeat(${value}, 1fr)`;
+    container.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
 
-function tileSorter(){
-
-    for (let i = 0; i < 8; i++){
-        for (let j = 0; j < 8; j++){
-            const tile = document.createElement('div');
-            tile.classList.add('tile');
+    for(let i = 0; i < value * value; i++){
+        const tile = document.createElement('div');
         container.appendChild(tile);
-        }
+        tile.style.backgroundColor = 'white';
+        tile.addEventListener('mouseover', () =>{
+            tile.style.backgroundColor = 'black';
+        })
     }
+    
 }
-tileSorter();
+sketchStarter(16);
+
