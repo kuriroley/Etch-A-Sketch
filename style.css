@@ -21,7 +21,6 @@
     text-shadow: 
     -100px 15px rgb(59, 2, 59);
 }
-
 .etch-container{
     background-color: rgb(71, 54, 31);
     color: white;
@@ -34,12 +33,14 @@
 
 .options{
     display: grid;
-    border: 1px solid white;
+    border: 3px groove salmon;
     border-radius: 10px;
+    margin-left: 150px;
     padding: 2px;
     height: 230px;
     width: 200px;
-    gap: 5px;
+    gap: 4px;
+    box-shadow: 10px 6px 2px black;
 }
 
 .options > button{
@@ -47,12 +48,26 @@
     background-color: antiquewhite;
     border-radius: 2px;
 }
+.options > button:hover{
+    background-color: whitesmoke;
+    box-shadow: inset -10px 1px 3px rgb(86, 85, 85);
+    transition: 0.5s;
+
+}
+
+.text-container{
+    margin-top: 10px;
+    align-self: baseline;
+}
+
 .sketch-pad{
     display: grid;
-    border: 3px solid salmon;
+    border: 5px groove salmon;
+    border-radius: 5px;
     height: 500px;
     width: 500px;
     background-color:white ;
+    box-shadow: 20px 6px 3px black;
 }
 
 
