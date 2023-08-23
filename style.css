@@ -23,12 +23,29 @@
 }
 
 .etch-container{
+    background-color: rgb(71, 54, 31);
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: rgb(71, 54, 31);
     height: 600px;
+    width: 100%;
+}
+
+.options{
+    display: grid;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 2px;
+    height: 230px;
+    width: 200px;
+    gap: 5px;
+}
+
+.options > button{
+    color: black;
+    background-color: antiquewhite;
+    border-radius: 2px;
 }
 .sketch-pad{
     display: grid;
