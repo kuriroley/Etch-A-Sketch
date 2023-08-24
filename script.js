@@ -16,6 +16,7 @@ function sketchStarter(value){
     const container = document.querySelector('.sketch-pad');
     const textContainer = document.querySelector('.text-container');
     const currentSizeText = document.createElement('p');
+    const randomizeColor = document.querySelector('.randomize-color');
     container.style.gridTemplateRows = `repeat(${value}, 1fr)`;
     container.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
 
@@ -27,15 +28,24 @@ function sketchStarter(value){
         tile.style.backgroundColor = 'white';
         tile.addEventListener('mouseover', () =>{
             tile.style.backgroundColor = 'black';
-        })
+        });
         resetButton.addEventListener('click', () =>{
             tile.style.backgroundColor = 'white';
-            currentSizeText.textContent = 'Current size is ';
+            currentSizeText.textContent = '';
+        });
+        randomizeColor.addEventListener('click', ()=>{
+            tile.addEventListener('mouseover', () =>{
+                tile.style.backgroundColor = randomColor();
+            });
         })
 
     }
     
 }
 
+function randomColor(){
+    var color = Math.floor(Math.random() * 16777216).toString(16);
+    return '#000000'.slice(0, -color.length) + color;
+}
 sketchStarter(16);
 
