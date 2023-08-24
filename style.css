@@ -22,6 +22,7 @@
     -100px 15px rgb(59, 2, 59);
 }
 .etch-container{
+    font-size: 18px;
     background-color: rgb(71, 54, 31);
     color: white;
     display: flex;
@@ -37,7 +38,7 @@
     border-radius: 10px;
     margin-left: 150px;
     padding: 2px;
-    height: 230px;
+    height: 300px;
     width: 200px;
     gap: 4px;
     box-shadow: 10px 6px 2px black;
@@ -52,7 +53,26 @@
     background-color: whitesmoke;
     box-shadow: inset -10px 1px 3px rgb(86, 85, 85);
     transition: 0.5s;
-
+}
+.options > .set-size-button:hover{
+    box-shadow: inset -35px 1px 5px salmon;
+    transition: 0.5s;
+}
+.options > .reset:hover{
+    box-shadow: inset -190px 1px 5px rgb(238, 47, 47);
+    transition: 0.5s;
+}
+.options > .randomize-color:hover{
+    box-shadow: inset -45px 1px 5px rgba(0, 0, 0, 0.344);
+    transition: 0.5s;
+}
+.options > .black-color:hover{
+    box-shadow: inset -50px 1px 5px rgb(0, 0, 0);
+    transition: 0.5s;
+}
+.options > .eraser:hover{
+    box-shadow: inset -50px 1px 5px rgb(246, 246, 246);
+    transition: 0.5s;
 }
 
 .text-container{
@@ -60,8 +80,9 @@
     background-color: rgb(62, 30, 30);
     margin-top: 10px;
     align-self: baseline;
+    border-radius: 3px ;
+    box-shadow: 20px 6px 3px black;
 }
-
 .sketch-pad{
     display: grid;
     border: 5px groove salmon;
@@ -70,6 +91,16 @@
     width: 500px;
     background-color:white ;
     box-shadow: 20px 6px 3px black;
+    cursor: crosshair;
+}
+.footer{
+    display: flex;
+    font-size: 19px;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    width: 100%;
+    height: 50px;
 }
 
 
