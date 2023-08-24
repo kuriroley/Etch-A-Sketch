@@ -18,6 +18,7 @@ function sketchStarter(value){
     const randomizeColor = document.querySelector('.randomize-color');
     const blackColor = document.querySelector('.black-color');
     const eraser = document.querySelector('.eraser');
+    const colorPickerButton = document.querySelector('.pick-a-color');
     container.style.gridTemplateRows = `repeat(${value}, 1fr)`;
     container.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
 
@@ -43,6 +44,12 @@ function sketchStarter(value){
                 tile.style.backgroundColor = 'black';
             });
         });
+        colorPickerButton.addEventListener('click', ()=>{
+            tile.addEventListener('mouseover' , ()=>{
+                let userColor = document.querySelector('#color-picker').value;
+                tile.style.backgroundColor = userColor;
+            })
+        })
         eraser.addEventListener('click', ()=>{
             tile.addEventListener('mouseover', ()=>{
                 tile.style.backgroundColor = 'white';
@@ -57,5 +64,6 @@ function randomColor(){
     let color = Math.floor(Math.random() * 16777216).toString(16);
     return '#000000'.slice(0, -color.length) + color;
 }
+
 sketchStarter(16);
 
