@@ -1,5 +1,5 @@
 const setSizeButton = document.querySelector('.set-size-button');
-let click = true;
+let click = true; //detect if click or not click working on it
 setSizeButton.addEventListener('click', () =>{
     let sketchSize = prompt('Please enter a value between 2 and 100');
     if (sketchSize >= 2 && sketchSize <= 100){
@@ -32,7 +32,8 @@ function sketchStarter(value){
             tile.style.backgroundColor = 'black';
         });
         resetButton.addEventListener('click', () =>{
-            tile.style.backgroundColor = 'white';
+            location.reload();
+            return false;
         });
         randomizeColor.addEventListener('click', ()=>{
             tile.addEventListener('mouseover', () =>{
