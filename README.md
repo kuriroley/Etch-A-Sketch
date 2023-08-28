@@ -1,3 +1,12 @@
-Hello!
-This will be my first ETCH-A-SKETCH website.
-This is for the odin project.
+# A Etch A Sketch Drawing board
+A simple drawing board where you can do the following:
+- Draw
+- Pick up a color
+- Randomize a color
+- Erase everything
+- Set the board size
+- See history of board size changes
+
+##### This was made for the odin project in August, 2023
+
+
